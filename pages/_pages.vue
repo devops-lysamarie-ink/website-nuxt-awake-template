@@ -29,15 +29,12 @@ export default {
       'seoMetaImage',
       'slug'
     ]),
-    date() {
-      return getFormattedDate(this.$store.state.date)
-    },
     url() {
       return `${process.env.URL}/${this.$route.fullPath}`
     }
   },
   fetch({ store, params }) {
-    setPageData(store, { resource: 'post', slug: params.singlePost })
+    setPageData(store, { resource: 'pages', slug: params.pages })
   }
 }
 </script>
